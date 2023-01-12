@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-import name from '../src/cli.js'; // eslint-disable-line no-unused-vars
+import brainGame from '../src/cli.js'; // eslint-disable-line no-unused-vars
+
+brainGame(); // eslint-disable-line no-unused-vars
