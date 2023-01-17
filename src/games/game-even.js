@@ -9,7 +9,7 @@ function isEven(number) {
 
 function gameEngine() {
   const number = randomNum();
-    const question = String(number);
+  const question = String(number);
   let correctAnswer = ' ';
   if (isEven(number)) {
     correctAnswer = 'yes';

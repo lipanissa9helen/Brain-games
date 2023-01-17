@@ -1,4 +1,4 @@
-const maxNumRand = 50;
+const maxNumRand = 100;
 const minNumRand = 0;
 
 function randomNum(minNum = minNumRand, maxNum = maxNumRand) {
