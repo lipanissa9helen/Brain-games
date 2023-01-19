@@ -1,7 +1,7 @@
 import randomNum from '../randomValues.js';
 import gameLogic from '../index.js';
 
-const descrGame = '"yes" if given number is prime. Otherwise answer "no".';
+const descrGame = '"yes" if given number is prime. Otherwise answer "no"';
 
 const min = 1;
 const max = 50;
