@@ -9,15 +9,13 @@ function randomOperation() {
 }
 
 function calculator(number1, operation, number2) {
-  let result = 0;
   if (operation === '+') {
-    result = number1 + number2;
+    return number1 + number2;
   } if (operation === '-') {
-    result = number1 - number2;
+    return number1 - number2;
   } if (operation === '*') {
-    result = number1 * number2;
+    return number1 * number2;
   }
-  return result;
 }
 
 function gameEngine() {
