@@ -11,7 +11,7 @@ const minRange = 1;
 const maxRange = 50;
 
 function arithmeticProgression() {
-  const arr = [];
+  const arr = []; 
   const progressionLength = randomNum(minLength, maxLength);
   const step = randomNum(minStep, maxStep);
   const progressionRange = randomNum(minRange, maxRange);
