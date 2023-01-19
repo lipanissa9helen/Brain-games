@@ -8,30 +8,25 @@
 
 "Игры разума" - набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. 
 
-
 ## Игра "Проверка на четность"
 
 ### *Запуск: "brain-even"*
 [![asciicast](https://asciinema.org/a/ZTatFB2W7MsLIDMXdFh3BrcRS.svg)](https://asciinema.org/a/ZTatFB2W7MsLIDMXdFh3BrcRS)
-
 
 ## Игра "Калькулятор"
 
 ### Запуск: "brain-calc"
 [![asciicast](https://asciinema.org/a/R7y26aS7j5vOCqMGD2Q3GPfvz.svg)](https://asciinema.org/a/R7y26aS7j5vOCqMGD2Q3GPfvz)
 
-
 ## Игра "НОД"
 
 ### Запуск игры: "brain-gcd"
 [![asciicast](https://asciinema.org/a/5iJUJ4X2wqHuVVmMCQay5sp2Q.svg)](https://asciinema.org/a/5iJUJ4X2wqHuVVmMCQay5sp2Q)
 
-
 ## Игра "Арифметическая прогрессия"
 
 ### *Запуск игры: "brain-progression"*
 [![asciicast](https://asciinema.org/a/KO07p0EcyV5jct0IRpfK6EBtz.svg)](https://asciinema.org/a/KO07p0EcyV5jct0IRpfK6EBtz)
-
 
 ## Игра "Простое ли число?"
 
