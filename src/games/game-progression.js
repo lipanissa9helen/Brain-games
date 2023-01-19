@@ -11,13 +11,14 @@ const minRange = 1;
 const maxRange = 50;
 
 function arithmeticProgression() {
-  const arr = []; 
+  const arr = [];
   const progressionLength = randomNum(minLength, maxLength);
   const step = randomNum(minStep, maxStep);
   const progressionRange = randomNum(minRange, maxRange);
   let progression = progressionRange;
   for (let i = 1; i < progressionLength; i += 1) {
-    arr.push(progression += step);
+    progression += step;
+    arr.push(progression);
   }
   return arr;
 }
@@ -30,7 +31,6 @@ function gameEngine() {
   progression[hiddenElement] = '..';
   const correctAnswer = String(number);
   const question = progression.join(' ');
-
   return [question, correctAnswer];
 }
 export default () => {

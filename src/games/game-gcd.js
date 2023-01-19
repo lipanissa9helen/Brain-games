@@ -20,7 +20,7 @@ const gameEngine = () => {
   const number1 = randomNum();
   const number2 = randomNum();
   const gcd = nodGcd(number1, number2);
-  const question = `${number1}${number2}`;
+  const question = `${number1} ${number2}`;
   const expectedAnswer = String(gcd);
   return [question, expectedAnswer];
 };
