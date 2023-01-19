@@ -10,7 +10,7 @@
 
 ## Игра "Проверка на четность"
 
-### *Запуск: "brain-even"*
+### Запуск: "brain-even"
 [![asciicast](https://asciinema.org/a/ZTatFB2W7MsLIDMXdFh3BrcRS.svg)](https://asciinema.org/a/ZTatFB2W7MsLIDMXdFh3BrcRS)
 
 ## Игра "Калькулятор"
@@ -25,10 +25,10 @@
 
 ## Игра "Арифметическая прогрессия"
 
-### *Запуск игры: "brain-progression"*
+### Запуск игры: "brain-progression"
 [![asciicast](https://asciinema.org/a/KO07p0EcyV5jct0IRpfK6EBtz.svg)](https://asciinema.org/a/KO07p0EcyV5jct0IRpfK6EBtz)
 
 ## Игра "Простое ли число?"
 
-### *Запуск игры: "brain-prime"*
+### Запуск игры: "brain-prime"
 [![asciicast](https://asciinema.org/a/OxZzw84i5zQNQxau3hAwvlp8h.svg)](https://asciinema.org/a/OxZzw84i5zQNQxau3hAwvlp8h)
