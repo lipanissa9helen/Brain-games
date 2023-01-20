@@ -13,11 +13,11 @@ const maxRange = 50;
 const randomIndex = (index) => Math.floor(Math.random() * index.length);
 
 const arithmeticProgression = (progressionLength, progressionStep, progressionRange) => {
-  const arr = [];
-  for (let i = progressionRange; i < progressionLength; i += progressionStep) {
-    arr.push(i);
+  const arrProgression = [];
+  for (let i = progressionRange; i < arrProgression.length; i += progressionStep) {
+    arrProgression.push(i);
   }
-  return arr;
+  return arrProgression;
 };
 
 const generateData = () => {
