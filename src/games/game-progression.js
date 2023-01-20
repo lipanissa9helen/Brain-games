@@ -14,7 +14,7 @@ const randomIndex = (index) => Math.floor(Math.random() * index.length);
 
 const arithmeticProgression = (progressionLength, progressionStep, progressionRange) => {
   const arrProgression = [];
-  for (let i = progressionRange; i < arrProgression.length; i += progressionStep) {
+  for (let i = progressionRange; arrProgression.length < progressionLength; i += progressionStep) {
     arrProgression.push(i);
   }
   return arrProgression;
