@@ -18,7 +18,7 @@ npm link
 ## Игра "Проверка на четность"
 
 ### Запуск: "brain-even"
-[![asciicast](https://asciinema.org/a/ZTatFB2W7MsLIDMXdFh3BrcRS.svg)](https://asciinema.org/a/ZTatFB2W7MsLIDMXdFh3BrcRS)
+[![asciicast](https://asciinema.org/a/RItEzwu1CsLGLbtvgI0iCnGg8.svg)](https://asciinema.org/a/RItEzwu1CsLGLbtvgI0iCnGg8)
 
 ## Игра "Калькулятор"
 
