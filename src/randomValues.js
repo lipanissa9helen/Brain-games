@@ -1,8 +1,5 @@
-const maxNumRand = 100;
-const minNumRand = 0;
+const randomNum = (minNum, maxNum) => Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
 
-function randomNum(minNum = minNumRand, maxNum = maxNumRand) {
-  return (Math.floor(Math.random() * maxNum) + minNum);
-}
+const randomIndex = (index) => Math.floor(Math.random() * index.length);
 
-export default randomNum;
+export { randomNum, randomIndex };

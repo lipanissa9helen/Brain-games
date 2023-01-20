@@ -1,23 +1,18 @@
 import randomNum from '../randomValues.js';
-import gameLogic from '../index.js';
+import gameEngine from '../index.js';
 
 const descrGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const minNum = 1;
+const maxNum = 100;
 
-function isEven(number) {
-  return number % 2 === 0;
-}
+const isEven = (number) => number % 2 === 0;
 
-function gameEngine() {
-  const number = randomNum();
+const generateData = () => {
+  const number = randomNum(minNum, maxNum);
   const question = String(number);
-  let correctAnswer = ' ';
-  if (isEven(number)) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const correctAnswer = isEven(number) ? 'yes' : 'no';
   return [question, correctAnswer];
-}
+};
 export default () => {
-  gameLogic(descrGame, gameEngine);
+  gameEngine(descrGame, generateData);
 };

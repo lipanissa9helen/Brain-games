@@ -1,12 +1,12 @@
 import randomNum from '../randomValues.js';
-import gameLogic from '../index.js';
+import gameEngine from '../index.js';
 
 const descrGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const min = 1;
 const max = 50;
 
-function primeNumber(number) {
+const primeNumber = (number) => {
   if (number === 1) {
     return false;
   } if (number === 2) {
@@ -18,19 +18,14 @@ function primeNumber(number) {
     }
   }
   return true;
-}
+};
 
-function gameEngine() {
+const generateData = () => {
   const number = randomNum(min, max);
   const question = String(number);
-  let correctAnswer = ' ';
-  if (primeNumber(number)) {
-    correctAnswer = 'yes';
-  } else {
-    correctAnswer = 'no';
-  }
+  const correctAnswer = primeNumber(number) ? 'yes' : 'no';
   return [question, correctAnswer];
-}
+};
 export default () => {
-  gameLogic(descrGame, gameEngine);
+  gameEngine(descrGame, generateData);
 };

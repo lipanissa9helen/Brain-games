@@ -1,5 +1,5 @@
-import randomNum from '../randomValues.js';
-import gameLogic from '../index.js';
+import { randomNum, randomIndex } from '../randomValues.js';
+import gameEngine from '../index.js';
 
 const descrGame = 'What number is missing in the progression?';
 
@@ -10,29 +10,26 @@ const maxStep = 10;
 const minRange = 1;
 const maxRange = 50;
 
-function arithmeticProgression() {
+const arithmeticProgression = (progressionLength, progressionStep, progressionRange) => {
   const arr = [];
-  const progressionLength = randomNum(minLength, maxLength);
-  const step = randomNum(minStep, maxStep);
-  const progressionRange = randomNum(minRange, maxRange);
-  let progression = progressionRange;
-  for (let i = 1; i < progressionLength; i += 1) {
-    progression += step;
-    arr.push(progression);
+  for (let i = progressionRange; i < progressionLength; i += progressionStep) {
+    arr.push(i);
   }
   return arr;
-}
+};
 
-function gameEngine() {
-  const progression = arithmeticProgression();
-  const size = progression.length;
-  const hiddenElement = randomNum(0, size);
+const generateData = () => {
+  const progressionLength = randomNum(minLength, maxLength);
+  const progressionStep = randomNum(minStep, maxStep);
+  const progressionRange = randomNum(minRange, maxRange);
+  const progression = arithmeticProgression(progressionLength, progressionStep, progressionRange);
+  const hiddenElement = randomIndex(progression);
   const number = progression[hiddenElement];
   progression[hiddenElement] = '..';
   const correctAnswer = String(number);
   const question = progression.join(' ');
   return [question, correctAnswer];
-}
+};
 export default () => {
-  gameLogic(descrGame, gameEngine);
+  gameEngine(descrGame, generateData);
 };

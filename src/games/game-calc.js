@@ -1,14 +1,16 @@
 import randomNum from '../randomValues.js';
-import gameLogic from '../index.js';
+import gameEngine from '../index.js';
 
 const descrGame = 'What is the result of the expression?';
+const minNum = 1;
+const maxNum = 50;
 
-function randomOperation() {
+const generateRanOperation = () => {
   const op = ['+', '-', '*'];
   return op[Math.floor(Math.random() * op.length)];
-}
+};
 
-function calculator(number1, operation, number2) {
+const calculator = (number1, operation, number2) => {
   let result = 0;
   if (operation === '+') {
     result = number1 + number2;
@@ -18,16 +20,16 @@ function calculator(number1, operation, number2) {
     result = number1 * number2;
   }
   return result;
-}
+};
 
-function gameEngine() {
-  const number1 = randomNum();
-  const number2 = randomNum();
-  const operation = randomOperation();
+const generateData = () => {
+  const number1 = randomNum(minNum, maxNum);
+  const number2 = randomNum(minNum, maxNum);
+  const operation = generateRanOperation();
   const question = `${number1} ${operation} ${number2}`;
   const correctAnswer = String(calculator(number1, operation, number2));
   return [question, correctAnswer];
-}
+};
 export default () => {
-  gameLogic(descrGame, gameEngine);
+  gameEngine(descrGame, generateData);
 };

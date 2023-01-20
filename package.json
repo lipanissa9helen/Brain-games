@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "version": "1.0.0",
   "type": "module",
-  "description": "[![Actions Status](https://github.com/lipanissa9helen/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/lipanissa9helen/frontend-project-44/actions)",
+  "description": "The Brain Games project consists of 5 console games to train your brain.",
   "main": "index.js",
   "bin": {
     "brain-games": "bin/brain-games.js",
