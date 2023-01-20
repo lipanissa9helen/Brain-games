@@ -1,4 +1,4 @@
-import { randomNum, randomIndex } from '../randomValues.js';
+import randomNum from '../randomValues.js';
 import gameEngine from '../index.js';
 
 const descrGame = 'What number is missing in the progression?';
@@ -9,6 +9,8 @@ const minStep = 1;
 const maxStep = 10;
 const minRange = 1;
 const maxRange = 50;
+
+const randomIndex = (index) => Math.floor(Math.random() * index.length);
 
 const arithmeticProgression = (progressionLength, progressionStep, progressionRange) => {
   const arr = [];
