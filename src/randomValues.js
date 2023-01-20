@@ -2,4 +2,4 @@ const randomNum = (minNum, maxNum) => Math.floor(Math.random() * (maxNum - minNu
 
 const randomIndex = (index) => Math.floor(Math.random() * index.length);
 
-export default { randomNum, randomIndex };
+export { randomNum as default, randomIndex };
