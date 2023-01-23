@@ -1,6 +1,7 @@
 const minNum = 1;
-const maxNum = 100;
+const maxNum = 50;
 
-const getRandom = (min = minNum, max = maxNum) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandNumber = (min = minNum, max = maxNum) => Math.floor(Math.random() * (max - min)) + min;
+const getRandIndex = (data) => Math.floor(Math.random() * data.length);
 
-export default getRandom;
+export { getRandNumber, getRandIndex };

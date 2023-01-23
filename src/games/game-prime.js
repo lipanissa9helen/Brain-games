@@ -1,4 +1,4 @@
-import getRandom from '../helpers.js';
+import { getRandNumber } from '../helpers.js';
 import runningEngine from '../index.js';
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -16,7 +16,7 @@ const isPrime = (number) => {
 };
 
 const generateData = () => {
-  const number = getRandom();
+  const number = getRandNumber();
   const question = String(number);
   const correctAnswer = isPrime(number) ? 'yes' : 'no';
   return [question, correctAnswer];

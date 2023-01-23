@@ -1,9 +1,7 @@
-import getRandom from '../helpers.js';
+import { getRandNumber, getRandIndex } from '../helpers.js';
 import runningEngine from '../index.js';
 
 const description = 'What number is missing in the progression?';
-
-const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
 
 const minLength = 5;
 const maxLength = 10;
@@ -21,11 +19,11 @@ const getProgression = (progressionLength, progressionStep, progressionRange) =>
 };
 
 const generateData = () => {
-  const progressionLength = getRandom(minLength, maxLength);
-  const progressionStep = getRandom(minStep, maxStep);
-  const progressionRange = getRandom(minRange, maxRange);
+  const progressionLength = getRandNumber(minLength, maxLength);
+  const progressionStep = getRandNumber(minStep, maxStep);
+  const progressionRange = getRandNumber(minRange, maxRange);
   const progression = getProgression(progressionLength, progressionStep, progressionRange);
-  const hiddenIndex = getRandomIndex(progression);
+  const hiddenIndex = getRandIndex(progression);
   const correctAnswer = String(progression[hiddenIndex]);
   progression[hiddenIndex] = '..';
   const question = progression.join(' ');
