@@ -1,9 +1,7 @@
-import randomNum from '../randomValues.js';
-import gameEngine from '../index.js';
+import getRandom from '../helpers.js';
+import runningEngine from '../index.js';
 
-const descrGame = 'Find the greatest common divisor of given numbers.';
-const minNum = 1;
-const maxNum = 100;
+const description = 'Find the greatest common divisor of given numbers.';
 
 const nodGcd = (number1, number2) => {
   let num1 = number1;
@@ -19,13 +17,11 @@ const nodGcd = (number1, number2) => {
 };
 
 const generateData = () => {
-  const number1 = randomNum(minNum, maxNum);
-  const number2 = randomNum(minNum, maxNum);
+  const number1 = getRandom();
+  const number2 = getRandom();
   const gcd = nodGcd(number1, number2);
   const question = `${number1} ${number2}`;
   const expectedAnswer = String(gcd);
   return [question, expectedAnswer];
 };
-export default () => {
-  gameEngine(descrGame, generateData);
-};
+export default () => runningEngine(description, generateData);

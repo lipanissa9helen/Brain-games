@@ -1,7 +1,7 @@
-import randomNum from '../randomValues.js';
-import gameEngine from '../index.js';
+import getRandom from '../helpers.js';
+import runningEngine from '../index.js';
 
-const descrGame = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 
 const minLength = 5;
 const maxLength = 10;
@@ -9,10 +9,9 @@ const minStep = 1;
 const maxStep = 10;
 const minRange = 1;
 const maxRange = 50;
+const min = 1;
 
-const randomIndex = (index) => Math.floor(Math.random() * index.length);
-
-const arithmeticProgression = (progressionLength, progressionStep, progressionRange) => {
+const getProgression = (progressionLength, progressionStep, progressionRange) => {
   const arrProgression = [];
   for (let i = progressionRange; arrProgression.length < progressionLength; i += progressionStep) {
     arrProgression.push(i);
@@ -21,17 +20,15 @@ const arithmeticProgression = (progressionLength, progressionStep, progressionRa
 };
 
 const generateData = () => {
-  const progressionLength = randomNum(minLength, maxLength);
-  const progressionStep = randomNum(minStep, maxStep);
-  const progressionRange = randomNum(minRange, maxRange);
-  const progression = arithmeticProgression(progressionLength, progressionStep, progressionRange);
-  const hiddenElement = randomIndex(progression);
-  const number = progression[hiddenElement];
-  progression[hiddenElement] = '..';
-  const correctAnswer = String(number);
+  const progressionLength = getRandom(minLength, maxLength);
+  const progressionStep = getRandom(minStep, maxStep);
+  const progressionRange = getRandom(minRange, maxRange);
+  const progression = getProgression(progressionLength, progressionStep, progressionRange);
+  const hiddenIndex = getRandom(min, progression.length);
+  const element = progression[hiddenIndex];
+  progression[hiddenIndex] = '..';
+  const correctAnswer = String(element);
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
-export default () => {
-  gameEngine(descrGame, generateData);
-};
+export default () => runningEngine(description, generateData);
