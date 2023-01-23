@@ -3,13 +3,15 @@ import runningEngine from '../index.js';
 
 const description = 'What number is missing in the progression?';
 
+const getRandomIndex = (data) => Math.floor(Math.random() * data.length);
+
 const minLength = 5;
 const maxLength = 10;
 const minStep = 1;
 const maxStep = 10;
 const minRange = 1;
 const maxRange = 50;
-const min = 1;
+const min = 0;
 
 const getProgression = (progressionLength, progressionStep, progressionRange) => {
   const arrProgression = [];
@@ -24,10 +26,9 @@ const generateData = () => {
   const progressionStep = getRandom(minStep, maxStep);
   const progressionRange = getRandom(minRange, maxRange);
   const progression = getProgression(progressionLength, progressionStep, progressionRange);
-  const hiddenIndex = getRandom(min, progression.length);
-  const element = progression[hiddenIndex];
+  const hiddenIndex = getRandomIndex(progression);
+  const correctAnswer = String(progression[hiddenIndex]);
   progression[hiddenIndex] = '..';
-  const correctAnswer = String(element);
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
