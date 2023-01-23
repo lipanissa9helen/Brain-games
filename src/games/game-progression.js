@@ -11,7 +11,6 @@ const minStep = 1;
 const maxStep = 10;
 const minRange = 1;
 const maxRange = 50;
-const min = 0;
 
 const getProgression = (progressionLength, progressionStep, progressionRange) => {
   const arrProgression = [];
